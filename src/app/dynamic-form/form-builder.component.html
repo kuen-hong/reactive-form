@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <div *ngFor="let field of model" [ngSwitch]="field.type">
+    <label [attr.for]="field.name">{{field.name}}</label>
+    <app-input *ngSwitchCase="'input'" [field]="field" 
+      [control]="form.get(field.name)! | formControl">
+    </app-input>
+    <app-select *ngSwitchCase="'select'" [field]="field"
+      [control]="form.get(field.name)! | formControl">
+    </app-select>
+  </div>
+  <button [disabled]="form.invalid" (click)="onSave()">Save</button>
+</form>

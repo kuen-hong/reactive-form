@@ -1,0 +1,3 @@
+<input [type]="field.type" [id]="field.name" [formControl]="control" 
+  [name]="field.name">
+<span style="background: red;" *ngIf="!isValid">{{field.name}} is required</span>
