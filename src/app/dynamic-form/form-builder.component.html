@@ -1,6 +1,6 @@
 <form [formGroup]="form">
   <div *ngFor="let field of model" [ngSwitch]="field.type">
-    <label [attr.for]="field.name">{{field.name}}</label>
+    <label [attr.for]="field.name">{{field.label}}</label>
     <app-input *ngSwitchCase="'input'" [field]="field" 
       [control]="form.get(field.name)! | formControl">
     </app-input>

@@ -8,23 +8,25 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   model = [
     {
-      name: 'firstName',
+      label: '財產編號',
+      name: 'assetSN',
       type: 'input',
       value: '',
       required: true
     },
     {
-      name: 'lastName',
+      label: '資產名稱',
+      name: 'assetName',
       type: 'input',
       value: ''
     },
     {
-      name: 'gender',
+      label: '部門',
+      name: 'dept',
       type: 'select',
-      value: 'm',
       options: [
-        {key: 'm', label: 'Male'},
-        {key: 'f', label: 'Female'}
+        {key: 'dept1', label: '研發一部'},
+        {key: 'dept2', label: '軟體服務部'}
       ]
     }
   ];
